@@ -37,6 +37,5 @@
   },
   "devDependencies": {
     "gh-pages": "^2.2.0"
-  },
-  "homepage": "http://travis-john.github.io/14-user-directory"
+  }
 }
