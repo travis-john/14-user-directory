@@ -5,7 +5,8 @@ class Pills extends Component {
   render(){
      return(
       <Container>
-        <ul class="nav nav-pills">
+        <label for='sort-pills'>Sort by:</label>
+        <ul class="nav nav-pills" id='sort-pills'>
           <li class="nav-item">
             <a class="nav-link active" href="/">All</a>
           </li>

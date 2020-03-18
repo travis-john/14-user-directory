@@ -1,25 +1,18 @@
 import React from "react";
-import CardBtn from "../CardBtn";
 
 function Card(props) {
   return (
-    <div
-      className="card"
-      style={{
-        backgroundImage: props.image ? `url(${props.image})` : "none"
-      }}
-    >
-      {!props.image && <i className="fa fa-spinner fa-spin" aria-hidden="true" />}
-      <CardBtn
-        style={{ opacity: props.image ? 1 : 0 }}
-        onClick={props.handleBtnClick}
-        data-value="pass"
-      />
-      <CardBtn
-        style={{ opacity: props.image ? 1 : 0 }}
-        onClick={props.handleBtnClick}
-        data-value="pick"
-      />
+    <div className='card'>
+      /* <img className='card-img-top' src={props.picture} /> */
+      <div className='card-body'>
+        <h5 className ='card-title'>{props.name}</h5>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item"><b>Company:</b> {props.company}</li>
+          <li class="list-group-item"><b>Email:</b> {props.email}</li>
+          <li class="list-group-item"><b>City:</b> {props.city}</li>
+          <li class="list-group-item"><b>Phone:</b> {props.phone}</li>
+        </ul>
+      </div>
     </div>
   );
 }
