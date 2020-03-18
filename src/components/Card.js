@@ -2,8 +2,7 @@ import React from "react";
 
 function Card(props) {
   return (
-    <div className='card'>
-      /* <img className='card-img-top' src={props.picture} /> */
+    <div className='card mb-4'>
       <div className='card-body'>
         <h5 className ='card-title'>{props.name}</h5>
         <ul class="list-group list-group-flush">
