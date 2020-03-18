@@ -5,7 +5,7 @@ import Container from './Container';
 class Navbar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-lg bg-info">
+      <nav className="navbar navbar-expand-lg bg-info mb-3">
         <Container>
           <a className="navbar-brand" href='/'>User Directory</a>
           <form className="form-inline">
