@@ -2710,6 +2710,7 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
     justify-content: space-between; }
 
 .navbar-brand {
+  color: var(--white);
   display: inline-block;
   padding-top: 0.3125rem;
   padding-bottom: 0.3125rem;
