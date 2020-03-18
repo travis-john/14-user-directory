@@ -28,16 +28,16 @@ class App extends Component {
       <Pills />
       <Container>
       <CardDeck>
-      {this.state.result.map((response, index) => {
+      {this.state.results.map((user, index) => (
         <Card
         key={index}
-        name={response.data.name}
-        company={response.data.company.name}
-        email={response.data.email}
-        city={response.data.address.city}
-        phone={response.data.phone}
+        name={user.name}
+        company={user.company.name}
+        email={user.email}
+        city={user.address.city}
+        phone={user.phone}
         />
-      })}
+      ))}
       </CardDeck>
       </Container>
       </>
