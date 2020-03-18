@@ -11,8 +11,8 @@ class Email extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get('https://jsonplaceholder.typicode.com/users')
-    this.setState({ results: res.data })
+    const res = await axios.get('https://randomuser.me/api/?results=200&nat=us')
+    this.setState({ results: res.data.results })
   }
 
   render() {

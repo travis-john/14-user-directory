@@ -11,9 +11,11 @@ class Name extends Component {
   }
 
   async componentDidMount() {
-    const res = await axios.get('https://jsonplaceholder.typicode.com/users')
-    this.setState({ results: res.data })
-  }
+     axios.get('https://randomuser.me/api/?results=200&nat=us')
+       .then(res => {
+         this.setState({ results: res.data})
+       })
+   }
 
   render() {
     return (
@@ -22,6 +24,7 @@ class Name extends Component {
         <Col size='md-4'>
           <Card
             key={result.id}
+            image = {result.picture}
             name={result.name}
             company={result.company.name}
             email={result.email}

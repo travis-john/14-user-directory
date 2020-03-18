@@ -16,9 +16,6 @@ class Pills extends Component {
           <li className="nav-item">
             <a className="nav-link" href="/email">Email</a>
           </li>
-          <li className="nav-item">
-            <a className="nav-link" href="/dob">DOB</a>
-          </li>
         </ul>
       </Container>
     );
