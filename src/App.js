@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import API from './utils/API';
+import axios from 'axios'
 import Navbar from './components/Navbar';
 import Pills from './components/Pills';
 import Container from './components/Container';
@@ -15,10 +15,10 @@ class App extends Component {
     filteredResults: []
   }
 
-  componentDidMount() {
-    API.getUsers()
-      .then(res => this.setState({ results: res.data, filteredResults: res.data }))
-      .catch(err => console.log(err));
+  async componentDidMount() {
+    const res = await axios.get('https://jsonplaceholder.typicode.com/users')
+    console.log(res);
+    this.setState({ results: res.data })
   }
 
   render() {
