@@ -3,7 +3,10 @@ import axios from "axios";
 const ALTURL = "https://jsonplaceholder.typicode.com/users";
 
 export default {
-  randomuser: function() {
-    return axios.get(ALTURL);
+  getUsers: function() {
+    return axios.get(ALTURL)
+    .then(function(res){
+      console.log(res);
+    });
   }
 };

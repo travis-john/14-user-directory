@@ -9,13 +9,15 @@ import Card from './components/Card';
 class App extends Component {
 
   state = {
-    result: [],
-    search: ""
-  };
+    sortBy: "",
+    results: [],
+    search: "",
+    filteredResults: []
+  }
 
   componentDidMount() {
-    API.randomuser()
-      .then(res => this.setState({ result: res}))
+    API.getUsers()
+      .then(res => this.setState({ results: res.data, filteredResults: res.data }))
       .catch(err => console.log(err));
   }
 
@@ -26,16 +28,16 @@ class App extends Component {
       <Pills />
       <Container>
       <CardDeck>
-      {this.state.result.map((res, index) => (
-            <Card
-              key={index}
-              name={res.name}
-              company={res.company.name}
-              email={res.email}
-              city = {res.address.city}
-              phone={res.phone}
-            />
-          ))}
+      {this.state.result.map((response, index) => {
+        <Card
+        key={index}
+        name={response.data.name}
+        company={response.data.company.name}
+        email={response.data.email}
+        city={response.data.address.city}
+        phone={response.data.phone}
+        />
+      })}
       </CardDeck>
       </Container>
       </>
