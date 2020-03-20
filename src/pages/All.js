@@ -8,7 +8,10 @@ class All extends Component {
 
   constructor (props){
     super(props);
-    this.state = { results:[], allResults:[] };
+    this.state = {
+      results:[],
+      allResults:[]
+    };
     this.all = this.all.bind(this);
     this.sortByName = this.sortByName.bind(this);
     this.sortByEmail = this.sortByEmail.bind(this);
