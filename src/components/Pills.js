@@ -1,25 +1,23 @@
-import React, { Component} from 'react';
+import React from 'react';
 import Container from './Container';
 
-class Pills extends Component {
-  render(){
+const Pills = (props) => {
      return(
       <Container>
         <label for='sort-pills'>Sort by:</label>
         <ul className="nav nav-pills mb-3" id='sort-pills'>
           <li className="nav-item">
-            <a className="nav-link active" href="/all">All</a>
+            <a className="nav-link active" onClick={props.function}>All</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/name">Name</a>
+            <a className="nav-link" onClick={props.function}>Name</a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="/email">Email</a>
+            <a className="nav-link" onClick={props.function}>Email</a>
           </li>
         </ul>
       </Container>
     );
-  };
 }
 
 export default Pills;
